@@ -1,0 +1,173 @@
+:root {
+    --font-size: 20px;
+}
+
+.authForm {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: var(--font-size);
+
+    > div {
+        width: 30%;
+        border-radius: 10px;
+        background-color: var(--color-primary);
+        padding: 10px;
+    }
+}
+
+.authFormHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        margin: 5px;
+    }
+}
+
+.authFormBody > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    .authFormText {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.authFormFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        margin: 5px;
+    }
+
+    p > a {
+        color: rgb(var(--color-primary-href));
+        text-decoration: none;
+    }
+}
+
+.authSubmitInput, .authFormCredentialsInput {
+    width: 90%;
+
+    display: block;
+    box-sizing: border-box;
+
+    padding: 0 7px;
+
+    border: 2px solid rgb(var(--color-primary-href));
+    border-radius: 10px;
+    background-color: var(--color-header);
+
+    font: inherit;
+    font-size: var(--font-size);
+}
+
+@media (max-width: 768px) {
+    .authForm > div {
+        width: 90%;
+
+        p, label {
+            font-size: 16px;
+        }
+    }
+}
+.authForm {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.authFormHeader h1 {
+    color: #2e7d32;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.authFormFooter a {
+    position: relative;
+    font-weight: 500;
+}
+
+.authFormFooter a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4CAF50;
+    transition: var(--transition);
+}
+
+.authFormFooter a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .authForm > div {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .authFormHeader h1 {
+        font-size: 1.5rem;
+    }
+}
+.errorMessage {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    padding: 8px;
+    background: #ffebee;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.passwordInputContainer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.eyeIcon {
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.eyeIcon:hover {
+    color: #4CAF50;
+}
+
+.authFormCredentialsInput::placeholder {
+    color: #9e9e9e;
+    opacity: 1;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,68 @@
+.profileContainer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 8px 16px;
+    background: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    color: #551A8BFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.backLink:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileInfo {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.infoItem span:first-child {
+    color: #666;
+    font-weight: 500;
+}
+
+.infoItem span:last-child {
+    color: #333;
+    font-weight: 600;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.error {
+    color: #dc3545;
+    padding: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,171 @@
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hrefProductCard {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.productCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.contentProductCard {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textBlockProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+}
+
+.productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+/* ... существующие стили ... */
+
+.cartControls {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.amountSelector {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.amountSelector button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #551A8BFF;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.amountSelector button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.amountSelector input {
+    width: 60px;
+    padding: 0.5rem;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.addButton {
+    width: 100%;
+    padding: 1rem;
+    background: #551A8BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.addButton:hover:not(:disabled) {
+    background: #551A8BFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.addButton:disabled {
+    background: #90caf9;
+    cursor: wait;
+}
+
+.successMessage {
+    color: #551A8BFF;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.errorMessage {
+    color: #d32f2f;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    background: #551A8BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .productGrid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}

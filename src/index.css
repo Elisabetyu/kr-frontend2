@@ -1,0 +1,65 @@
+:root {
+    --color-header: #f5f7fa;
+    --color-header-href: #4CAF50;
+    --color-primary: #e8f5e9;
+    --color-primary-href: 76, 175, 80;
+    --color-primary-background: #fafafa;
+    --color-primory-text: rgb(85, 26, 139);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+input, button {
+    transition: var(--transition);
+}
+
+.authForm > div {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.authFormCredentialsInput {
+    border: 2px solid #e0e0e0;
+    padding: 12px 20px;
+    transition: var(--transition);
+}
+
+.authFormCredentialsInput:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.authSubmitInput {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 0;
+    transition: var(--transition);
+}
+
+.authSubmitInput:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.headerForm {
+    background: rgba(245, 247, 250, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}

@@ -1,0 +1,177 @@
+.productContainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 8px 16px;
+    background: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    color: #551A8BFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.backLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #551A8BFF;
+    transition: width 0.3s ease-out;
+}
+
+.backLink:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backLink:hover::after {
+    width: 100%;
+}
+
+/* Остальные стили остаются без изменений */
+
+.productCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.productImage {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f8f9fa;
+    padding: 1rem;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* [file name]: components/Product/ProductDetail.module.css */
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 2px solid #f0f0f0;
+}
+
+.price {
+    font-size: 2rem;
+    color: #551A8BFF;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cartControls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Остальные стили остаются без изменений */
+
+.addButton {
+    padding: 1rem 2rem;
+    background: #551A8BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addButton:hover:not(:disabled) {
+    background: #551A8BFF;
+    transform: translateY(-2px);
+}
+
+.addButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.amountInput {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin: 0 5px;
+    transition: border-color 0.2s;
+}
+
+.amountInput:focus {
+    border-color: #551A8BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.amountInput:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}
+.amountWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.amountButton {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f0f2f5;
+    color: #551A8BFF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amountButton:hover:not(:disabled) {
+    background: #551A8BFF;
+    color: white;
+}
+
+.amount {
+    font-size: 1.2rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.error {
+    color: #551A8BFF;
+    font-size: 0.9rem;
+    text-align: right;
+}
